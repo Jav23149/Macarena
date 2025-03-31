@@ -1,15 +1,29 @@
 /* Estilos CSS para la página web - Versión Blanco y Celeste */
 body {
-    font-family: 'Georgia', serif; /* Fuente serif formal */
+    font-family: 'Georgia', serif;
     margin: 0;
-    background-color: #ffffff; /* Fondo general blanco */
-    color: #333; /* Texto principal en un gris oscuro para legibilidad sobre blanco */
+    background-color: #ffffff;
+    color: #333;
     line-height: 1.6;
 }
 
+/* Estilos generales que aplican a todos los tamaños de pantalla */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-bg {
+    background-color: #ffffff;
+    padding: 3rem 0;
+}
+
+/* Header */
 .header-centered-logo {
-    background-color: #ffffff; /* Header blanco */
-    color: #333; /* Texto del header en gris oscuro */
+    position: relative;
+    background-color: #ffffff;
+    color: #333;
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
@@ -20,7 +34,6 @@ body {
     width: 100%;
     z-index: 100;
     text-align: center;
-     /* Línea celeste inferior para destacar el header */
 }
 
 .header-centered-logo .logo {
@@ -37,30 +50,72 @@ body {
 .header-centered-logo .logo h1 {
     margin: 0;
     font-size: 2rem;
-    color: #1e90ff; /* Logo en celeste */
+    color: #1e90ff;
     font-weight: bold;
 }
 
-.header-centered-logo nav a {
-    color: #555; /* Enlaces en gris */
+.menu-toggle {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: none; /* Oculto por defecto en pantallas grandes */
+}
+
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.nav-links {
+    display: flex; /* Muestra la navegación en línea por defecto para pantallas grandes */
+}
+
+.nav-links a {
+    color: #555;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.header-centered-logo nav a:hover {
-    color: #1e90ff; /* Celeste al pasar el ratón */
+.nav-links a:hover {
+    color: #1e90ff;
 }
 
-/* Estilos para la sección del héroe con imagen de fondo */
+/* Hero Section */
 #hero {
     position: relative;
     overflow: hidden;
-    color: #333; /* Texto en gris oscuro */
+    color: #333;
     text-align: center;
     padding: 4rem 0;
-     /* Fondo celeste muy claro para el héroe */
 }
 
 .hero-video-container {
@@ -84,7 +139,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el texto */
+    background-color: rgba(161, 228, 236, 0.493);
     border-radius: 8px;
     position: relative;
     z-index: 10;
@@ -93,19 +148,19 @@ body {
 .hero-content h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #00000077; /* Título en celeste */
+    color: #000000c5;
     font-weight: bold;
 }
 
 .hero-content p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    color: #555;
+    color:#000000d0;
 }
 
 .button {
     display: inline-block;
-    background-color: #1e90ff; /* Botón en celeste */
+    background-color: #1e90ff;
     color: #ffffff;
     padding: 1.2rem 2.5rem;
     text-decoration: none;
@@ -116,26 +171,16 @@ body {
 }
 
 .button:hover {
-    background-color: #00bfff; /* Celeste más brillante al pasar el ratón */
+    background-color: #00bfff;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.section-bg {
-    background-color: #ffffff; /* Fondo blanco para las secciones */
-    padding: 3rem 0;
-}
-
+/* Servicios */
 #servicios h2,
 #quienes-somos h2,
 #contacto h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #1e90ff; /* Títulos de sección en celeste */
+    color: #1e90ff;
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -147,12 +192,12 @@ body {
 }
 
 .service-item {
-    background-color: #f0f8ff;; /* Items de servicio en blanco */
+    background-color: #f0f8ff;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border-bottom: 2px solid #add8e6; /* Línea celeste inferior para resaltar */
+    border-bottom: 2px solid #add8e6;
 }
 
 .service-item img {
@@ -172,12 +217,11 @@ body {
     font-size: 1rem;
 }
 
-/* Estilos para la sección de garantía de limpieza */
+/* Garantía de Limpieza */
 #garantia-limpieza {
-    background-color: #ffffff; /* Fondo celeste claro */
+    background-color: #ffffff;
     padding: 4rem 0;
     border-top: 1px solid #cce5ff;
-    
 }
 
 #garantia-limpieza .container {
@@ -189,7 +233,7 @@ body {
 #garantia-limpieza h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #1e90ff; /* Título en celeste */
+    color: #1e90ff;
     font-size: 2.2rem;
     font-weight: bold;
     letter-spacing: 0.02em;
@@ -204,10 +248,10 @@ body {
 
 #garantia-limpieza p strong {
     font-weight: bold;
-    color: #1e90ff; /* Resaltado en celeste */
+    color: #1e90ff;
 }
 
-/* Estilos para la sección Quiénes Somos y el carrusel */
+/* Quiénes Somos */
 #quienes-somos .carousel-container {
     display: flex;
     overflow-x: auto;
@@ -230,7 +274,7 @@ body {
     align-items: center;
     padding: 20px;
     text-align: left;
-    background-color: #ffffff; /* Slides en blanco */
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -264,7 +308,7 @@ body {
 }
 
 #quienes-somos .carousel-controls button {
-    background-color: #1e90ff; /* Botones en celeste */
+    background-color: #1e90ff;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -278,25 +322,24 @@ body {
     background-color: #00bfff;
 }
 
-/* Estilos para la sección de contacto - Grid de Valoraciones y Redes Sociales */
-/* Estilos para la sección de contacto - Similar a la sección de servicios */
+/* Contacto */
 #contacto {
-    background-color: #ffffff; /* Fondo blanco */
-    padding: 3rem 0; /* Espaciado vertical */
+    background-color: #ffffff;
+    padding: 3rem 0;
 }
 
 #contacto .container {
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor */
-    padding: 20px; /* Espaciado dentro del contenedor */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 #contacto h2 {
-    text-align: center; /* Centrar el título */
+    text-align: center;
     margin-bottom: 2rem;
-    color: #1e90ff; /* Color del título */
-    font-size: 2.5rem; /* Tamaño del título (si quieres que coincida) */
-    font-weight: bold; /* Peso de la fuente del título (si quieres que coincida) */
+    color: #1e90ff;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 #contacto .contacto-grid {
@@ -308,10 +351,10 @@ body {
 
 #contacto .valoracion-google,
 #contacto .redes-sociales {
-    padding: 20px; /* Añade padding a los bloques como en los items de servicio */
-    border-radius: 8px; /* Añade bordes redondeados como en los items de servicio */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Añade una sombra suave como en los items de servicio */
-    border-bottom: 2px solid #add8e6; /* Mantenemos el borde celeste inferior */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid #add8e6;
     background-color: #f0f8ff;
 }
 
@@ -340,7 +383,6 @@ body {
     background-color: #357ae8;
 }
 
-
 #contacto .iconos-redes a {
     display: flex;
     align-items: center;
@@ -359,15 +401,14 @@ body {
     margin-right: 10px;
 }
 
-
-
+/* Footer */
 footer {
-    background-color: #ffffff; /* Footer blanco */
-    color: #555; /* Texto del footer en gris */
+    background-color: #ffffff;
+    color: #555;
     text-align: center;
     padding: 1rem 0;
     margin-top: 3rem;
-    border-top: 2px solid #add8e6; /* Borde celeste superior */
+    border-top: 2px solid #add8e6;
 }
 
 footer .container {
@@ -388,145 +429,139 @@ footer nav a:hover {
     color: #1e90ff;
 }
 
-/* Para pantallas de tablet (ancho máximo de 768px) - Ya lo tienes */
+/* Media Queries para Responsive Design */
+
+/* Para pantallas de tablet (ancho máximo de 768px) */
 @media (max-width: 768px) {
-    /* Ajustes para tablet */
-    #contacto .contacto-grid {
-        grid-template-columns: 1fr;
+    /* Header */
+    .header-centered-logo {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
     }
+
+    .header-centered-logo .logo {
+        margin-bottom: 0;
+    }
+
+    .header-centered-logo nav {
+        display: none; /* Ocultar navegación en tablet por defecto */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar botón de menú en tablet */
+    }
+
+    /* Hero */
+    .hero-content {
+        padding: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Servicios */
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+
+    /* Quiénes Somos */
     #quienes-somos .carousel-slide {
         flex-direction: column;
         text-align: center;
     }
+
     #quienes-somos .carousel-slide img {
         max-width: 80%;
         margin-right: 0;
         margin-bottom: 15px;
     }
-    /* ... otros ajustes para tablet ... */
+
+    /* Contacto */
+    #contacto .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer nav {
+        margin-top: 10px;
+    }
 }
 
 /* Para pantallas de celular (ancho máximo de 576px) */
 @media (max-width: 576px) {
-    /* Ajustes para celular */
+    /* Header */
     .header-centered-logo .logo img {
-        height: 60px; /* Reducir el tamaño del logo */
+        height: 60px;
     }
-    .header-centered-logo nav a {
-        font-size: 1rem; /* Reducir el tamaño de la fuente de la navegación */
-        margin: 0 10px;
+
+    .header-centered-logo .logo h1 {
+        font-size: 1.8rem;
     }
-    #servicios .services-grid {
-        grid-template-columns: 1fr; /* Apilar los servicios */
+
+    /* Hero */
+    .hero-content h2 {
+        font-size: 2rem;
     }
-    #contacto .contacto-grid {
-        grid-template-columns: 1fr; /* Apilar las secciones de contacto */
+
+    .hero-content p {
+        font-size: 1rem;
     }
-    footer .container {
-        flex-direction: column; /* Apilar los elementos del footer */
-        text-align: center;
+
+    .button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
-    footer nav {
-        margin-top: 10px;
+
+    /* Servicios */
+    .services-grid {
+        grid-template-columns: 1fr;
     }
+
+    /* Quiénes Somos */
+    #quienes-somos .carousel-slide img {
+        max-width: 100%;
+    }
+
+    /* Footer */
     footer nav a {
         margin: 5px;
     }
-    /* ... otros ajustes para celular ... */
-}
-/* Estilos para el header responsive */
-.header-centered-logo {
-    /* ... otros estilos del header ... */
-    position: relative; /* Necesario para posicionar el botón de menú */
-}
 
-.menu-toggle {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    display: none; /* Oculto por defecto en pantallas grandes */
-}
-
-.hamburger {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #333; /* Color del icono */
-    transition: background-color 0.3s ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    transition: transform 0.3s ease-in-out;
-}
-
-.hamburger::before {
-    top: -8px;
-}
-
-.hamburger::after {
-    top: 8px;
-}
-
-.nav-links {
-    display: flex; /* Muestra la navegación en línea por defecto */
-    /* ... otros estilos de la navegación ... */
-}
-
-/* Estilos para pantallas más pequeñas (celular) */
-@media (max-width: 576px) {
-    .nav-links {
-        display: none; /* Oculta la navegación por defecto en pantallas pequeñas */
-        flex-direction: column;
-        background-color: #ffffff; /* Fondo para el menú desplegable */
+    .header-centered-logo nav {
+        display: none; /* Ocultar por defecto en celular */
         position: absolute;
-        top: 100%; /* Coloca el menú debajo del header */
+        top: 100%;
         left: 0;
         width: 100%;
-        text-align: center;
+        background-color: #ffffff;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 10; /* Asegura que esté sobre otros elementos */
+        z-index: 10;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .nav-links.active {
-        display: flex; /* Muestra la navegación cuando la clase 'active' está presente */
+    .header-centered-logo nav.active {
+        display: flex; /* Mostrar cuando la clase 'active' está presente */
     }
 
-    .nav-links a {
-        padding: 15px 20px;
+    .header-centered-logo nav a {
         display: block;
+        padding: 15px 20px;
         border-bottom: 1px solid #eee;
+        margin: 0; /* Resetear los márgenes que tenías para desktop */
     }
 
-    .nav-links a:last-child {
+    .header-centered-logo nav a:last-child {
         border-bottom: none;
     }
-
-    .menu-toggle {
-        display: block; /* Muestra el botón de menú en pantallas pequeñas */
-    }
-
-    /* Animación del icono de hamburguesa al estar activo */
-    .menu-toggle.active .hamburger {
-        background-color: transparent; /* Oculta la línea central */
-    }
-
-    .menu-toggle.active .hamburger::before {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    .menu-toggle.active .hamburger::after {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-}
