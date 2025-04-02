@@ -302,6 +302,7 @@ body {
 }
 
 /* Quiénes Somos */
+
 #quienes-somos .carousel-container {
     display: flex;
     overflow-x: auto;
@@ -342,76 +343,7 @@ body {
 
 #quienes-somos .carousel-slide h3 {
     margin-bottom: 10px;
-    color: #333;
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-#quienes-somos .carousel-slide p {
-    color: #555;
-    font-size: 1.1rem;
-}
-
-#quienes-somos .carousel-controls {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#quienes-somos .carousel-controls button {
-    background-color: #1e90ff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-#quienes-somos .carousel-controls button:hover {
-    background-color: #00bfff;
-}
-#quienes-somos .carousel-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-#quienes-somos .carousel-container::-webkit-scrollbar {
-    display: none;
-}
-
-#quienes-somos .carousel-slide {
-    flex: 0 0 100%;
-    width: 100%;
-    height: auto;
-    scroll-snap-align: start;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    text-align: left;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-#quienes-somos .carousel-slide img {
-    max-width: 50%;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 8px;
-}
-
-#quienes-somos .carousel-slide .carousel-content {
-    flex: 1;
-}
-
-#quienes-somos .carousel-slide h3 {
-    margin-bottom: 10px;
-    color: #333;
+    color: #1e90ff;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -638,18 +570,7 @@ footer nav a:hover {
         grid-template-columns: repeat(2, minmax(250px, 1fr));
     }
 
-    /* Quiénes Somos */
-    #quienes-somos .carousel-slide {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #quienes-somos .carousel-slide img {
-        max-width: 80%;
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-
+    
     /* Contacto */
     #contacto .contacto-grid {
         grid-template-columns: 1fr;
